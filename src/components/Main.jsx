@@ -17,7 +17,7 @@ export default function Main() {
           {movies.map(function (currentMovie) {
             return (
               <tr key={currentMovie.id}>
-                <th scope="row">{currentMovie.original_title}</th>
+                <td>{currentMovie.original_title}</td>
                 <td>{currentMovie.title}</td>
                 <td>{currentMovie.original_language}</td>
                 <td>{currentMovie.vote_average}</td>
