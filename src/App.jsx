@@ -1,4 +1,5 @@
 import Header from "./components/Header";
+import Main from "./components/Main";
 import { MoviesProvider } from "./contexts/MoviesContext";
 
 export default function App() {
@@ -6,6 +7,7 @@ export default function App() {
     <>
       <MoviesProvider>
         <Header />
+        <Main />
       </MoviesProvider>
     </>
   );
