@@ -1,8 +1,12 @@
 import Card from "./Card";
-export default function ResultSection({ movies }) {
+export default function ResultSection({ movies, series, moviesPlusSeries }) {
   return (
     <>
-      <Card movies={movies} />
+      <Card
+        movies={movies}
+        series={series}
+        moviesPlusSeries={moviesPlusSeries}
+      />
     </>
   );
 }

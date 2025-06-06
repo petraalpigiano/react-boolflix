@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useSearch } from "../contexts/MoviesContext";
+import { useSearch } from "../contexts/SearchContext";
 
 export default function SearchBar() {
   const { search } = useSearch();

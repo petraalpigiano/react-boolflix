@@ -1,12 +1,16 @@
 import ResultSection from "./ResultSection";
 import Loader from "./Loader";
-import { useSearch } from "../contexts/MoviesContext";
+import { useSearch } from "../contexts/SearchContext";
 
 export default function Main() {
-  const { movies } = useSearch();
+  const { movies, series, moviesPlusSeries } = useSearch();
   return (
     <>
-      <ResultSection movies={movies} />
+      <ResultSection
+        movies={movies}
+        series={series}
+        moviesPlusSeries={moviesPlusSeries}
+      />
       <Loader />
     </>
   );

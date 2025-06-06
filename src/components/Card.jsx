@@ -1,4 +1,4 @@
-export default function Card({ movies }) {
+export default function Card({ movies, series, moviesPlusSeries }) {
   return (
     <>
       <table className="table table-striped">
@@ -11,13 +11,13 @@ export default function Card({ movies }) {
           </tr>
         </thead>
         <tbody>
-          {movies.map(function (currentMovie) {
+          {moviesPlusSeries.map(function (currentElement) {
             return (
-              <tr key={currentMovie.id}>
-                <td>{currentMovie.original_title}</td>
-                <td>{currentMovie.title}</td>
-                <td>{currentMovie.original_language}</td>
-                <td>{currentMovie.vote_average}</td>
+              <tr key={currentElement.id}>
+                <td>{currentElement.original_title}</td>
+                <td>{currentElement.title}</td>
+                <td>{currentElement.original_language}</td>
+                <td>{currentElement.vote_average}</td>
               </tr>
             );
           })}
