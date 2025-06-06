@@ -1,4 +1,5 @@
 import axios from "axios";
+
 import { createContext, useContext, useState } from "react";
 const SearchContext = createContext();
 
@@ -7,6 +8,7 @@ function SearchProvider({ children }) {
   const apiKey = import.meta.env.VITE_API_KEY;
   const [movies, setMovies] = useState([]);
   const [series, setSeries] = useState([]);
+  const [flags, setFlags] = useState("".toUpperCase());
   const moviesPlusSeries = movies.concat(series);
 
   function search(input) {
@@ -28,6 +30,7 @@ function SearchProvider({ children }) {
           };
         });
         setSeries(response);
+        setFlags("IT");
       });
   }
 

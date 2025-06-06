@@ -16,7 +16,11 @@ export default function Card({ movies, series, moviesPlusSeries }) {
               <tr key={currentElement.id}>
                 <td>{currentElement.original_title}</td>
                 <td>{currentElement.title}</td>
-                <td>{currentElement.original_language}</td>
+                <td>
+                  <img
+                    src={`https://flagsapi.com/${currentElement.original_language.toUpperCase()}/shiny/24.png`}
+                  ></img>
+                </td>
                 <td>{currentElement.vote_average}</td>
               </tr>
             );
