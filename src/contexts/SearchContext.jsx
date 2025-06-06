@@ -8,7 +8,6 @@ function SearchProvider({ children }) {
   const apiKey = import.meta.env.VITE_API_KEY;
   const [movies, setMovies] = useState([]);
   const [series, setSeries] = useState([]);
-  const [flags, setFlags] = useState("".toUpperCase());
   const moviesPlusSeries = movies.concat(series);
 
   function search(input) {
@@ -27,10 +26,10 @@ function SearchProvider({ children }) {
             vote_average: currentSerie.vote_average,
             original_title: currentSerie.original_name,
             original_language: currentSerie.original_language,
+            poster_path: currentSerie.poster_path,
           };
         });
         setSeries(response);
-        setFlags("IT");
       });
   }
 
