@@ -1,8 +1,8 @@
 import axios from "axios";
 import { createContext, useContext, useState } from "react";
-const MoviesContext = createContext();
+const SearchContext = createContext();
 
-function MoviesProvider({ children }) {
+function SearchProvider({ children }) {
   const apiURL = "https://api.themoviedb.org/3";
   const apiKey = import.meta.env.VITE_API_KEY;
   const [movies, setMovies] = useState([]);
@@ -16,15 +16,15 @@ function MoviesProvider({ children }) {
 
   return (
     <>
-      <MoviesContext.Provider value={{ movies, search }}>
+      <SearchContext.Provider value={{ movies, search }}>
         {children}
-      </MoviesContext.Provider>
+      </SearchContext.Provider>
     </>
   );
 }
 
-function useMovies() {
-  return useContext(MoviesContext);
+function useSearch() {
+  return useContext(SearchContext);
 }
 
-export { useMovies, MoviesProvider };
+export { useSearch, SearchProvider };

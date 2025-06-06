@@ -1,8 +1,8 @@
 import { useState } from "react";
-import { useMovies } from "../contexts/MoviesContext";
+import { useSearch } from "../contexts/MoviesContext";
 
 export default function SearchBar() {
-  const { search } = useMovies();
+  const { search } = useSearch();
   const [input, setInput] = useState("");
   function handleFormSubmit(e) {
     e.preventDefault();

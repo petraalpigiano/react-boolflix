@@ -1,9 +1,9 @@
 import ResultSection from "./ResultSection";
 import Loader from "./Loader";
-import { useMovies } from "../contexts/MoviesContext";
+import { useSearch } from "../contexts/MoviesContext";
 
 export default function Main() {
-  const { movies } = useMovies();
+  const { movies } = useSearch();
   return (
     <>
       <ResultSection movies={movies} />
