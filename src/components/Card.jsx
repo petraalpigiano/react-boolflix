@@ -1,3 +1,8 @@
+import ReactDOM from "react-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faStar as FullStar } from "@fortawesome/free-solid-svg-icons";
+import { faStar as EmptyStar } from "@fortawesome/free-regular-svg-icons";
+
 export default function Card({ movies, series, moviesPlusSeries }) {
   // const flagAPI = `https://flagsapi.com/${currentElement.original_language.toUpperCase()}/shiny/24.png`;
   // const flagAPI = `https://flagsapi.com/JA/shiny/24.png`;
@@ -30,7 +35,10 @@ export default function Card({ movies, series, moviesPlusSeries }) {
                     src={`https://flagsapi.com/${currentElement.original_language.toUpperCase()}/shiny/24.png`}
                   ></img>
                 </td>
-                <td>{currentElement.vote_average}</td>
+                <td>
+                  <FontAwesomeIcon icon={FullStar} />
+                  <FontAwesomeIcon icon={EmptyStar} />
+                </td>
               </tr>
             );
           })}
